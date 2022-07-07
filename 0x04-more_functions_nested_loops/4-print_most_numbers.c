@@ -3,6 +3,7 @@
 /**
 *print_most_numbers - fn to print numbers except 2 and 4
 */
+
 void print_most_numbers(void)
 {
 	int c;
