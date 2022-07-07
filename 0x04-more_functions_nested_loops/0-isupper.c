@@ -3,7 +3,7 @@
 /**
  * _isupper - fn to check for uppercase character
  * @c: parameter c
- * Return: returns number of repetition
+ * Return: Return 1 for uppercase and 0 for lowercase
  */
 int _isupper(int c)
 {
