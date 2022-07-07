@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _isupperr - fn to check for uppercase character
+ * _isupper - fn to check for uppercase character
  * @c: parameter c
  * Return: returns number of repetition
  */
