@@ -8,7 +8,7 @@ int main void
 	while (a <= 100)
 	if (a % 3 == 0)
 	{
-		printf(" Fizz\n");
+		printf(" Fizz");
 		a++;
 	}
 	else if (a % 5 == 0)
