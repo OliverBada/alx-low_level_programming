@@ -1,31 +1,41 @@
 #include <stdio.h>
+#include "main.h"
 
-int main (void)
+/**
+ * main - entry point
+ * Return: 0 is success
+ */
+int main(void)
 {
+	int i;
 
-	int a = 1;
+	for (i = 1; i <= 100; i++)
+	{
+		if (i != 100)
+		{
+		if (i % 3 == 0 && i % 5 == 0)
+		{
+			printf("%s ", "FizzBuzz");
+		}
+		else if (i % 5 != 0 && i % 3 == 0)
+		{
+			printf("%s ", "Fizz");
+		}
+		else if ((i % 5 == 0) && (i % 3 != 0))
+		{
+			printf("%s ", "Buzz");
+		}
+		else
+		{
+			printf("%d ", i);
+		}
+		}
+		else
+		{
+			printf("%s", "Buzz");
+		}
+	}
+	putchar('\n');
 
-	while (a <= 100)
-	if ( (a % 5 == 0) && (a % 3 == 0) ) 
-	{
-		printf("FizzBuzz " );
-		a++;
-	}
-	else if (a % 3 == 0)
-	{
-		printf("Fizz ");
-		a++;
-	}
-	else if (a % 5 == 0)
-	{
-		printf("Buzz ");
-		a++;
-	}
-	else
-	{
-		printf("%d ", a);
-		a++;
-	}
-	printf("\n");
 	return (0);
 }
