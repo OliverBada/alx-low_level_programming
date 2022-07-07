@@ -1,25 +1,31 @@
 #include <stdio.h>
 
-int main void
+int main (void)
 {
 
 	int a = 1;
 
 	while (a <= 100)
-	if (a % 3 == 0)
+	if ( (a % 5 == 0) && (a % 3 == 0) ) 
 	{
-		printf(" Fizz");
+		printf("FizzBuzz " );
 		a++;
 	}
 	else if (a % 5 == 0)
 	{
-		printf(" Buzz");
+		printf("Buzz ");
+		a++;
+	}
+	else if (a % 3 == 0)
+	{
+		printf("Fizz ");
 		a++;
 	}
 	else
 	{
-		printf(" %d", a);
+		printf("%d ", a);
 		a++;
 	}
+	printf("\n");
 	return (0);
 }
