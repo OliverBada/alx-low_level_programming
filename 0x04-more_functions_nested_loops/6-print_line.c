@@ -1,11 +1,13 @@
 #include "main.h"
 
 /**
-* print_line - fn to draws a straight line in the terminal
-* @n: parameter
-* Return: 0 is success
+* print_line - print spaces n times
+* @n: value to use
+* Return: no
 */
+
 void print_line(int n)
+
 {
 	int x;
 
