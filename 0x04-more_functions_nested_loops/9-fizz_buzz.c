@@ -11,14 +11,14 @@ int main (void)
 		printf("FizzBuzz " );
 		a++;
 	}
-	else if (a % 5 == 0)
-	{
-		printf("Buzz ");
-		a++;
-	}
 	else if (a % 3 == 0)
 	{
 		printf("Fizz ");
+		a++;
+	}
+	else if (a % 5 == 0)
+	{
+		printf("Buzz ");
 		a++;
 	}
 	else
