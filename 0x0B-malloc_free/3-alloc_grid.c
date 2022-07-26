@@ -25,6 +25,7 @@ int **alloc_grid(int width, int height)
 
 		if (my_array[i] == NULL)
 		{
+		free (my_array);
 		return (NULL);
 		}
 
