@@ -31,5 +31,6 @@ int **alloc_grid(int width, int height)
 		for (j = 0; j < width; j++)
 			my_array[i][j] = 0;
 	}
+	free (my_array);
 	return (my_array);
 }
