@@ -13,9 +13,9 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *p_scat;
-	int i, len2, j, x, s1_len, s2_len;
+	int i, len, j, x, s1_len, s2_len;
 
-	len2 = n;
+	len = n;
 
 	if (!s1)
 	{
@@ -36,7 +36,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		p_scat[i] = s1[i];
 	}
-	if (len2 >= s2_len)
+	if (len >= s2_len)
 	{
 		for (j = 0; s2[j] != '\0'; j++)
 		{
@@ -46,7 +46,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	else
 	{
-		for (x = 0; x < len2; x++)
+		for (x = 0; x < len; x++)
 		{
 			p_scat[(i + x)] = s2[x];
 			p_scat[(s1[i] + s2[n] + 1)] = '\0';
