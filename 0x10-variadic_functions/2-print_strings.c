@@ -3,31 +3,33 @@
 #include <stdio.h>
 
 /**
-*print_strings - a function that prints strings
-*@separator: string to be printed between the strings
-*@n: number of strings passed to the function
-*
-*/
+ * print_strings - function that prints strings.
+ * @n: resepresents the number of arguments
+ * @separator: resepresents the seperator b/w the numbers
+ * Return: Always 0.
+ */
 
 void print_strings(const char *separator, const unsigned int n, ...)
 {
-	va_list ap;
-	unsigned int i;
 
-	char *ptr;
+	va_list strings;
+	unsigned int count;
 
-	va_start(ap, n);
+	char *str;
+	va_start(strings, n);
 
-	for (i = 0; i < n; i++)
+	for (count = 0; count < n; count++)
 	{
-		ptr = va_arg(ap, char *);
-	if (ptr == NULL)
-		printf("nil");
-	else
-		printf("%s", ptr);
-		if (i < (n - 1) && separator != NULL)
-			printf("%s", separator);
+		str = va_arg(strings, char *);
+		if (str == NULL)
+			printf("nil");
+		else
+		{
+			printf("%s", str);
+			if (count < (n - 1) && separator != NULL)
+				printf("%s", separator);
+		}
 	}
-	va_end(ap);
+	va_end(strings); /* clean up the list */
 	printf("\n");
 }
