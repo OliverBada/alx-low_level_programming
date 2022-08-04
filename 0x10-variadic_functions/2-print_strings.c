@@ -3,33 +3,30 @@
 #include <stdio.h>
 
 /**
- * print_strings - function that prints strings.
- * @n: resepresents the number of arguments
- * @separator: resepresents the seperator b/w the numbers
- * Return: Always 0.
- */
+*print_strings - a function that prints strings, followed by a new line.
+*@separator: pointer
+*@n: number of integers
+*/
 
 void print_strings(const char *separator, const unsigned int n, ...)
 {
+	unsigned int i;
+	va_list ap;
 
-	va_list strings;
-	unsigned int count;
+	char *ptr;
 
-	char *str;
-	va_start(strings, n);
+	va_start(ap, n);
 
-	for (count = 0; count < n; count++)
+	for (i = 0; i < n; i++)
 	{
-		str = va_arg(strings, char *);
-		if (str == NULL)
-			printf("nil");
-		else
-		{
-			printf("%s", str);
-			if (count < (n - 1) && separator != NULL)
-				printf("%s", separator);
-		}
+	ptr = va_arg(ap, char *);
+	if (ptr == NULL)
+	printf("nil");
+	else
+	printf("%s", ptr);
+	if (i < (n - 1) && separator != NULL)
+	printf("%s", separator);
 	}
-	va_end(strings); /* clean up the list */
+	va_end(ap);
 	printf("\n");
 }
